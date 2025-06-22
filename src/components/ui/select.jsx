@@ -1,18 +1,23 @@
+// src/components/ui/select.tsx
+
+"use client"
+
 import * as React from "react"
+import {
+  Select as PrimitiveSelect,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@radix-ui/react-select"
 import { cn } from "@/lib/utils"
 
-const Select = React.forwardRef(({ className, children, ...props }, ref) => (
-  <select
-    className={cn(
-      "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
-      className,
-    )}
-    ref={ref}
-    {...props}
-  >
-    {children}
-  </select>
-))
-Select.displayName = "Select"
+// You may want to add styling wrappers here
 
-export { Select }
+export {
+  PrimitiveSelect as Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+}
